@@ -1,8 +1,0 @@
-D:\VSProjects\Microservices\Networking\bin\Debug\Networking.dll
-D:\VSProjects\Microservices\Networking\bin\Debug\Networking.pdb
-D:\VSProjects\Microservices\Networking\obj\Debug\Networking.dll
-D:\VSProjects\Microservices\Networking\obj\Debug\Networking.pdb
-D:\VSProjects\Networking\bin\Debug\Networking.dll
-D:\VSProjects\Networking\bin\Debug\Networking.pdb
-D:\VSProjects\Networking\obj\Debug\Networking.dll
-D:\VSProjects\Networking\obj\Debug\Networking.pdb
