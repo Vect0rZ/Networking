@@ -43,10 +43,14 @@
     <Compile Include="BufferInfo.cs" />
     <Compile Include="ConnectionResolver\ConnectionResolver.cs" />
     <Compile Include="ConnectionResolver\IConnectionResolver.cs" />
+    <Compile Include="DataTransfer\TcpStream.cs" />
     <Compile Include="Exceptions\MaximumTransferSizeReachedException.cs" />
+    <Compile Include="Pipeline\ConcretePipelines\AppendHeaderPipeline.cs" />
     <Compile Include="Pipeline\ConcretePipelines\DataPacketPipeline.cs" />
     <Compile Include="Pipeline\ConcretePipelines\DeserializeDataPipeline.cs" />
     <Compile Include="Pipeline\ConcretePipelines\ProtocolHeaderPipeline.cs" />
+    <Compile Include="Pipeline\ConcretePipelines\SendDataPipeline.cs" />
+    <Compile Include="Pipeline\ConcretePipelines\SerializeDataPipeline.cs" />
     <Compile Include="Pipeline\ConcretePipelines\Test\DivideByFourIntPipeline.cs" />
     <Compile Include="Pipeline\ConcretePipelines\Test\IncrementIntPipeline.cs" />
     <Compile Include="Pipeline\ConcretePipelines\Test\MultiplyByTwoIntPipeline.cs" />
@@ -56,6 +60,7 @@
     <Compile Include="Pipeline\PipelineData\BytePipelineData.cs" />
     <Compile Include="Pipeline\PipelineData\IntPipelineData.cs" />
     <Compile Include="Pipeline\PipelineData\IPipelineData.cs" />
+    <Compile Include="Pipeline\PipelineData\ObjectPipelineData.cs" />
     <Compile Include="Pipeline\PipelineProcessor.cs" />
     <Compile Include="Protocol\ProtocolHeader.cs" />
     <Compile Include="Protocol\IProtocolHandler.cs" />
