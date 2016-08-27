@@ -14,7 +14,7 @@ namespace Networking.Pipeline.PipelineData
         public List<byte> FullData;
         public int BytesRead;
         public ProtocolHeader Header;
-        public object Result;
+        public string Result;
 
         public BytePipelineData(NetworkStream ns)
         {

@@ -45,16 +45,16 @@
     <Compile Include="ConnectionResolver\IConnectionResolver.cs" />
     <Compile Include="DataTransfer\TcpStream.cs" />
     <Compile Include="Exceptions\MaximumTransferSizeReachedException.cs" />
-    <Compile Include="Pipeline\ConcretePipelines\AppendHeaderPipeline.cs" />
-    <Compile Include="Pipeline\ConcretePipelines\DataPacketPipeline.cs" />
-    <Compile Include="Pipeline\ConcretePipelines\DeserializeDataPipeline.cs" />
-    <Compile Include="Pipeline\ConcretePipelines\ProtocolHeaderPipeline.cs" />
-    <Compile Include="Pipeline\ConcretePipelines\SendDataPipeline.cs" />
-    <Compile Include="Pipeline\ConcretePipelines\SerializeDataPipeline.cs" />
-    <Compile Include="Pipeline\ConcretePipelines\Test\DivideByFourIntPipeline.cs" />
-    <Compile Include="Pipeline\ConcretePipelines\Test\IncrementIntPipeline.cs" />
-    <Compile Include="Pipeline\ConcretePipelines\Test\MultiplyByTwoIntPipeline.cs" />
-    <Compile Include="Pipeline\ConcretePipelines\Test\SquaredIntPipeline.cs" />
+    <Compile Include="Pipeline\ConcretePipelines\SendObjectPipelines\AppendHeaderPipeline.cs" />
+    <Compile Include="Pipeline\ConcretePipelines\ReceiveObjectPipelines\DataPacketPipeline.cs" />
+    <Compile Include="Pipeline\ConcretePipelines\ReceiveObjectPipelines\DeserializeDataPipeline.cs" />
+    <Compile Include="Pipeline\ConcretePipelines\ReceiveObjectPipelines\ProtocolHeaderPipeline.cs" />
+    <Compile Include="Pipeline\ConcretePipelines\SendObjectPipelines\SendDataPipeline.cs" />
+    <Compile Include="Pipeline\ConcretePipelines\SendObjectPipelines\SerializeDataPipeline.cs" />
+    <Compile Include="Pipeline\ConcretePipelines\_Test\DivideByFourIntPipeline.cs" />
+    <Compile Include="Pipeline\ConcretePipelines\_Test\IncrementIntPipeline.cs" />
+    <Compile Include="Pipeline\ConcretePipelines\_Test\MultiplyByTwoIntPipeline.cs" />
+    <Compile Include="Pipeline\ConcretePipelines\_Test\SquaredIntPipeline.cs" />
     <Compile Include="Pipeline\NetworkPipeline.cs" />
     <Compile Include="Pipeline\Pipeline.cs" />
     <Compile Include="Pipeline\PipelineData\BytePipelineData.cs" />
@@ -68,9 +68,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Protocol\ProtocolHandler.cs" />
     <Compile Include="Serialization\IObjectSerializer.cs" />
-    <Compile Include="Serialization\ISerializer.cs" />
+    <Compile Include="Serialization\IStringSerializer.cs" />
     <Compile Include="Serialization\ObjectSerializer.cs" />
+    <Compile Include="Serialization\StringSerializer.cs" />
     <Compile Include="SocketState.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pipeline\ConcretePipelines\SendStringPipelines\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

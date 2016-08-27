@@ -1,5 +1,7 @@
 ﻿using Networking.Pipeline;
 using Networking.Pipeline.ConcretePipelines;
+using Networking.Pipeline.ConcretePipelines.ReceiveObjectPipelines;
+using Networking.Pipeline.ConcretePipelines.SendObjectPipelines;
 using Networking.Pipeline.PipelineData;
 using System;
 using System.Collections.Generic;
@@ -34,7 +36,7 @@ namespace Networking.DataTransfer
         /// If a protocol header is not present returns null.
         /// </summary>
         /// <returns></returns>
-        public object Receive()
+        public string Receive()
         {
             BytePipelineData data = new BytePipelineData(_stream);
 
@@ -42,7 +44,7 @@ namespace Networking.DataTransfer
             {
                 _receivePipelineProcessor.Process(data);
             }
-            catch
+            catch(Exception e)
             {
                 return null;
             }
@@ -54,7 +56,7 @@ namespace Networking.DataTransfer
         /// Serializes the object, appends the protocol header and sends the data to the receiver.
         /// </summary>
         /// <param name="object"></param>
-        public void Send(object @object)
+        public void Send(string @object)
         {
             ObjectPipelineData data = new ObjectPipelineData(_stream, @object);
 

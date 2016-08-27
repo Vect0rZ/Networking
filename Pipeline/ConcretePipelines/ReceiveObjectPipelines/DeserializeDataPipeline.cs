@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Networking.Pipeline.ConcretePipelines
+namespace Networking.Pipeline.ConcretePipelines.ReceiveObjectPipelines
 {
     public class DeserializeDataPipeline : NetworkPipeline<BytePipelineData>
     {
@@ -16,7 +16,7 @@ namespace Networking.Pipeline.ConcretePipelines
 
             finalData = _protocolHandler.PostProcess(finalData);
 
-            object result = _serializer.Deserialize(finalData);
+            string result = _stringSerializer.Deserialize(finalData);
 
             data.Result = result;
 

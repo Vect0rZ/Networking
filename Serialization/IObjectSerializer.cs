@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Networking.Serialization
 {
-    public interface IObjectSerializer : ISerializer
+    public interface IObjectSerializer
     {
         byte[] Serialize(object @object);
 

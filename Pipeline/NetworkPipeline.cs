@@ -13,8 +13,9 @@ namespace Networking.Pipeline
 {
     public abstract class NetworkPipeline<T> : Pipeline<T> where T : IPipelineData
     {
-        protected ProtocolHandler _protocolHandler = new ProtocolHandler();
-        protected ObjectSerializer _serializer = new ObjectSerializer();
+        protected IProtocolHandler _protocolHandler = new ProtocolHandler();
+        protected IObjectSerializer _objectSerializer = new ObjectSerializer();
+        protected IStringSerializer _stringSerializer = new StringSerializer();
 
         public override abstract T Procedure(T data);
 

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Networking.Pipeline.ConcretePipelines
+namespace Networking.Pipeline.ConcretePipelines.ReceiveObjectPipelines
 {
     public class DataPacketPipeline : NetworkPipeline<BytePipelineData>
     {

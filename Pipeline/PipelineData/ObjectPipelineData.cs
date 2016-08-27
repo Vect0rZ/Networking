@@ -11,11 +11,11 @@ namespace Networking.Pipeline.PipelineData
     {
         public NetworkStream NetworkStream;
 
-        public object Input;
+        public string Input;
 
         public byte[] Output;
 
-        public ObjectPipelineData(NetworkStream ns, object data)
+        public ObjectPipelineData(NetworkStream ns, string data)
         {
             NetworkStream = ns;
             Input = data;

@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Networking.Serialization
 {
-    public interface ISerializer
+    public interface IStringSerializer
     {
+        byte[] Serialize(string @object);
+
+        string Deserialize(byte[] @object);
     }
 }
